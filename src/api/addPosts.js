@@ -2,11 +2,10 @@ import axios from "axios";
 
 export const addPosts = async (newPost) => {
   try {
-    const response = await axios.post(
-      "/nepali_social_posts_with_comments.json",
-      newPost
-    );
-    return response.data;
+    const existing = JSON.parse(localStorage.getItem("posts")) || [];
+    const updated = [...existing, newPost];
+    localStorage.setItem("posts", JSON.stringify(updated));
+    return newPost;
   } catch (error) {
     console.error("Error adding post:", error);
     throw error;
