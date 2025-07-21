@@ -18,7 +18,6 @@ const PostCard = ({
     if (newComment.trim() === "") return;
 
     const commentToAdd = {
-      id: Date.now(),
       username: "you",
       profile_picture,
       text: newComment,

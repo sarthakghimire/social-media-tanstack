@@ -17,7 +17,7 @@ const PostList = () => {
   }
   return (
     <div>
-      {data.map((post) => (
+      {data.slice(0, 5).map((post) => (
         <PostCard
           key={post.id}
           username={post.username}
