@@ -55,7 +55,7 @@ const PostCard = ({
             onClick={handleLike}
             className="text-red-500 hover:text-red-600"
           >
-            ❤️ Like ({likes})
+            ❤️{likes == 0 ? "Like" : "Unlike"}
           </button>
           <button
             onClick={handleAddComment}
