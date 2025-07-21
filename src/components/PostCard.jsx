@@ -30,7 +30,7 @@ const PostCard = ({
   const formattedTime = new Date(time_posted).toLocaleString();
 
   return (
-    <div className="flex justify-center mb-6">
+    <div className="flex justify-center mt-3 mb-6">
       <div className="w-full max-w-md bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
         <div className="flex items-center gap-3 p-4">
           <img
